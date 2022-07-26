@@ -1,10 +1,9 @@
 <?php
-  
 if($_POST) {
     $visitor_name = "";
     $visitor_email = "";
     $email_title = "";
-    $recipient = "";
+    $recipient = "ppichels3@gmail.com";
     $visitor_message = "";
     $email_body = "<div>";
       
@@ -24,7 +23,7 @@ if($_POST) {
     }
       
     if(isset($_POST['email_title'])) {
-        $email_title = filter_var($_POST['email_title'], FILTER_SANITIZE_STRING);
+        $email_title = 'in.group | ' + filter_var($_POST['email_title'], FILTER_SANITIZE_STRING);
         $email_body .= "<div>
                            <label><b>Reason For Contacting Us:</b></label>&nbsp;<span>".$email_title."</span>
                         </div>";
@@ -43,14 +42,17 @@ if($_POST) {
     $headers  = 'MIME-Version: 1.0' . "\r\n"
     .'Content-type: text/html; charset=utf-8' . "\r\n"
     .'From: ' . $visitor_email . "\r\n";
+
+    echo(json_encode(array("type" => "error", "msg" => "This feature is not currently working.")))
       
-    if(mail($recipient, $email_title, $email_body, $headers)) {
-        echo "<p>Thank you for contacting us, $visitor_name. You will get a reply within 24 hours.</p>";
-    } else {
-        echo '<p>We are sorry but the email did not go through.</p>';
-    }
+    // if(mail($recipient, $email_title, $email_body, $headers)) {
+    //     echo(json_encode(array("type" => "success", "msg" => "Thank you for contacting us, $visitor_name. You will get a reply within 24 hours."))
+    //     );
+    // } else {
+    //     echo(json_encode(array('type' => 'error', 'msg' => 'We are sorry but the email did not go through.')));
+    // }
       
 } else {
-    echo '<p>Something went wrong</p>';
+    echo 'Something went wrong';
 }
 ?>
