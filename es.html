@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- saved from url=(0035)/ -->
-<html lang="es-CO">
+<html lang="es-PR">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
@@ -18,7 +18,7 @@
 				svgUrl: 'https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/',
 				svgExt: '.svg',
 				source: {
-					concatemoji: 'https:\/\/cr3ativegrowth.com\/ingroup\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.0.1'
+					concatemoji: '.\/files\/wp-emoji-release.min.js?ver=6.0.1'
 				}
 			};
 			/*! This file is auto-generated */
@@ -337,10 +337,10 @@
 		<meta name="generator" content="WordPress 6.0.1" />
 		<link rel="canonical" href="/" />
 		<link rel="shortlink" href="/" />
-		<link rel="icon" href="/wp-content/uploads/2022/06/favicon.png" sizes="32x32" />
-		<link rel="icon" href="/wp-content/uploads/2022/06/favicon.png" sizes="192x192" />
-		<link rel="apple-touch-icon" href="/wp-content/uploads/2022/06/favicon.png" />
-		<meta name="msapplication-TileImage" content="/wp-content/uploads/2022/06/favicon.png" />
+		<link rel="icon" href="./files/favicon.png" sizes="32x32" />
+		<link rel="icon" href="./files/favicon.png" sizes="192x192" />
+		<link rel="apple-touch-icon" href="./files/favicon.png" />
+		<meta name="msapplication-TileImage" content="./files/favicon.png" />
 		<style id="sccss">
 			/*---Custom Styles---*/
 			.elementor-menu-toggle i:before {
@@ -348,7 +348,7 @@
 				display: block;
 				width: 30px;
 				height: 20px;
-				background: url(/wp-content/uploads/2022/03/Nav-Icon.png);
+				background: url(./files/Nav-Icon.png);
 				background-size: cover;
 				background-repeat: no-repeat;
 			}
@@ -357,8 +357,8 @@
 				display: block;
 				width: 30px;
 				height: 30px;
-				background: url(/wp-content/uploads/2022/03/Close.png);
-				background-size: cover;
+				background: url(./files/Close.png);
+				background-size: contain;
 				background-repeat: no-repeat;
 			}
 			.elementor-nav-menu__container.elementor-nav-menu--dropdown {
@@ -368,6 +368,7 @@
 			.elementor-nav-menu--dropdown .elementor-nav-menu {
 				background-color: #2d3748;
 				border-radius: 20px;
+				overflow: hidden;
 			}
 			/*down button*/
 			.down .fa-chevron-down {
@@ -382,6 +383,213 @@
 			.down .elementor-button-text {
 				padding-top: 10px;
 				padding-right: 5px;
+			}
+			.custom-button {
+				font-family: 'Nunito', Sans-serif;
+				fill: var(--e-global-color-text);
+				color: var(--e-global-color-text);
+				background-color: #00000000;
+				padding: 0px 0px 0px 0px;
+				margin-top: 10px;
+				margin-left: 25px;
+				margin-right: 25px;
+				margin-bottom: 10px;
+			}
+			.custom-button-span {
+				padding: 10px;
+				color: var(--e-global-color-text);
+				border-radius: 50px;
+				box-shadow: 2px 13px 27px 5px rgb(0 0 0 / 35%);
+				font-weight: 600;
+				font-family: 'Source Sans Pro', Sans-serif;
+				white-space: nowrap;
+				display: inline-block;
+			}
+			.custom-button-span.no-shadow {
+				box-shadow: none;
+			}
+			.custom-button-span.custom-padding {
+				padding: 7px 15px;
+			}
+			.custom-button-span.orange {
+				background-color: #ff8a26;
+			}
+			.custom-button-span.gray {
+				background-color: #efefef;
+				color: #000000;
+			}
+			.custom-select {
+				background-color: #00000000;
+				border: none;
+			}
+			.ic-modal {
+				background-color: rgba(0, 0, 0, 0.3);
+				display: none;
+				left: 0;
+				top: 0;
+				z-index: 9999;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+			}
+			.ic-modal.fixed {
+				position: fixed;
+			}
+			.ic-modal.active {
+				display: block;
+			}
+			.ic-modal.darker {
+				background-color: rgba(0, 0, 0, 0.8);
+			}
+			.ic-modal .card {
+				max-width: 100%;
+				width: 800px;
+				position: relative;
+				left: 0;
+				max-height: 80%;
+				margin-left: auto;
+				margin-right: auto;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				z-index: 100;
+				overflow: auto;
+			}
+			.ic-modal .card .card-body {
+				overflow: auto;
+				position: relative;
+				padding-bottom: 56.25%; /* 16:9 */
+				height: 0;
+			}
+			.card {
+				display: flex;
+				flex-direction: column;
+				min-width: 0;
+				word-wrap: break-word;
+				background-color: #fff;
+				background-clip: border-box;
+				border: 1px solid rgba(0, 40, 100, 0.12);
+				border-radius: 3px;
+				box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
+				margin-bottom: 1.5rem;
+				width: 100%;
+			}
+			.modal-video {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+			}
+
+			/* Language Select custom styles */
+			.lang-menu {
+				width: 100px;
+				text-align: right;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				cursor: pointer;
+			}
+			.lang-menu .selected-lang {
+				display: flex;
+				align-items: center;
+				padding: 10px 20px;
+				line-height: 20px;
+				transition: 0.4s;
+			}
+			.lang-menu .selected-lang:before {
+				content: '';
+				margin-right: calc(1rem * 0.25);
+				width: 1.6rem;
+				height: 1.2rem;
+				display: inline-block;
+				background: no-repeat center/100% 100%;
+				vertical-align: bottom;
+				font-style: normal;
+				box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+				border-radius: 2px;
+				background-image: url(./files/flags/es.svg);
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+			.lang-menu ul {
+				margin: 0;
+				padding: 0;
+				display: none;
+				background-color: #2d3748;
+				position: absolute;
+				right: 0px;
+				top: 45px;
+				bottom: none;
+				width: 125px;
+				border-radius: 5px;
+				box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+				overflow: hidden;
+			}
+			.lang-menu ul li {
+				list-style: none;
+				text-align: left;
+				display: flex;
+				justify-content: space-between;
+			}
+			.lang-menu ul li a {
+				text-decoration: none;
+				width: 125px;
+				display: block;
+				color: #fff;
+				line-height: 20px;
+			}
+			.lang-menu ul li a:before {
+				content: '';
+				display: inline-block;
+				width: 25px;
+				height: 25px;
+				vertical-align: middle;
+				margin-right: 10px;
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+			@media (min-width: 1024px) {
+				.lang-menu ul li a {
+					padding-top: 15px;
+					padding-bottom: 15px;
+				}
+			}
+			.lang-menu-scroll .selected-lang {
+				transition: initial;
+			}
+			.lang-menu-scroll {
+				width: 100% !important;
+				padding-top: 5px;
+				padding-bottom: 5px;
+			}
+			.lang-menu-scroll ul {
+				bottom: 45px;
+				top: initial !important;
+				right: initial;
+				width: 125px;
+			}
+			.lang-menu-scroll ul li a {
+				width: initial;
+				display: flex !important;
+			}
+			.lang-menu:hover ul {
+				display: block;
+			}
+			.lang-menu ul li a:hover {
+				color: var(--e-global-color-primary);
+			}
+			.menu-item-scroll .elementor-item:hover {
+				color: var(--e-global-color-primary) !important;
+			}
+			.menu-item-scroll .elementor-item:hover {
+				background-color: #2d3748 !important;
+			}
+			.es:before {
+				background-image: url(./files/flags/es.svg);
+			}
+			.us:before {
+				background-image: url(./files/flags/us.svg);
 			}
 		</style>
 		<!-- To Top Custom CSS -->
@@ -572,6 +780,21 @@
 															<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10">
 																<a href="#contact" class="elementor-item elementor-item-anchor">Contact</a>
 															</li>
+															<li class="menu-item menu-item-type-custom menu-item-object-custom">
+																<div class="elementor-item elementor-item-anchor">
+																	<div class="lang-menu">
+																		<div class="selected-lang">English</div>
+																		<ul>
+																			<li>
+																				<a href="https:www.in.group" class="us">English</a>
+																			</li>
+																			<li>
+																				<a href="https:www.in.group/es" class="es">Español</a>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
 														</ul>
 													</nav>
 													<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false" style="">
@@ -605,6 +828,21 @@
 															<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10">
 																<a href="#contact" class="elementor-item elementor-item-anchor" tabindex="-1">Contact</a>
 															</li>
+															<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-scroll">
+																<div class="elementor-item elementor-item-anchor">
+																	<div class="lang-menu lang-menu-scroll">
+																		<div class="selected-lang">English</div>
+																		<ul>
+																			<li>
+																				<a href="https:www.in.group" class="us">English</a>
+																			</li>
+																			<li>
+																				<a href="https:www.in.group/es" class="es">Español</a>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
 														</ul>
 													</nav>
 												</div>
@@ -629,9 +867,12 @@
 					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1e43ba0" data-id="1e43ba0" data-element_type="column">
 						<div class="elementor-widget-wrap elementor-element-populated">
 							<section class="elementor-section elementor-inner-section elementor-element elementor-element-b5171a6 elementor-reverse-mobile elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="b5171a6" data-element_type="section">
-								<div class="elementor-container elementor-column-gap-default">
+								<div class="elementor-container elementor-column-gap-default" style="flex-wrap: nowrap">
+									<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-e63489b mobile-remove" data-id="9f60906" data-element_type="column">
+										<div class="elementor-widget-wrap elementor-element-populated"></div>
+									</div>
 									<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-d88e161" data-id="d88e161" data-element_type="column">
-										<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-widget-wrap elementor-element-populated" style="justify-content: center">
 											<div class="elementor-element elementor-element-26d8456 elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="26d8456" data-element_type="widget" data-widget_type="image.default">
 												<div class="elementor-widget-container">
 													<img width="500" height="158" src="./files/Vector_inGroup_Logos-02.png" class="attachment-large size-large" alt="" loading="lazy" sizes="(max-width: 500px) 100vw, 500px" />
@@ -653,7 +894,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-9f60906" data-id="9f60906" data-element_type="column">
+									<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-e63489b" data-id="9f60906" data-element_type="column">
 										<div class="elementor-widget-wrap elementor-element-populated">
 											<div
 												class="elementor-element elementor-element-4efa5ec elementor-nav-menu--stretch elementor-nav-menu__text-align-center elementor-nav-menu__align-right elementor-nav-menu--dropdown-tablet elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu"
@@ -689,6 +930,21 @@
 															<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10">
 																<a href="#contact" class="elementor-item elementor-item-anchor">Contact</a>
 															</li>
+															<li class="menu-item menu-item-type-custom menu-item-object-custom">
+																<div class="elementor-item elementor-item-anchor">
+																	<div class="lang-menu">
+																		<div class="selected-lang">English</div>
+																		<ul>
+																			<li>
+																				<a href="https:www.in.group" class="us">English</a>
+																			</li>
+																			<li>
+																				<a href="https:www.in.group/es" class="es">Español</a>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
 														</ul>
 													</nav>
 													<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false" style="">
@@ -696,7 +952,7 @@
 														<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i>
 														<span class="elementor-screen-only">Menu</span>
 													</div>
-													<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" role="navigation" aria-hidden="true" style="top: 0px; width: 1728px; left: 0px">
+													<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" role="navigation" aria-hidden="true" style="top: 35px; width: 1728px; left: 0px">
 														<ul id="menu-2-4efa5ec" class="elementor-nav-menu" data-smartmenus-id="16583576175679468">
 															<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7">
 																<a href="#top" class="elementor-item elementor-item-anchor" tabindex="-1">Home</a>
@@ -721,6 +977,21 @@
 															</li>
 															<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10">
 																<a href="#contact" class="elementor-item elementor-item-anchor" tabindex="-1">Contact</a>
+															</li>
+															<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-scroll">
+																<div class="elementor-item elementor-item-anchor">
+																	<div class="lang-menu lang-menu-scroll">
+																		<div class="selected-lang">English</div>
+																		<ul>
+																			<li>
+																				<a href="https:www.in.group" class="us">English</a>
+																			</li>
+																			<li>
+																				<a href="https:www.in.group/es" class="es">Español</a>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
 															</li>
 														</ul>
 													</nav>
@@ -806,6 +1077,21 @@
 															<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10">
 																<a href="#contact" class="elementor-item elementor-item-anchor">Contact</a>
 															</li>
+															<li class="menu-item menu-item-type-custom menu-item-object-custom">
+																<div class="elementor-item elementor-item-anchor">
+																	<div class="lang-menu">
+																		<div class="selected-lang">English</div>
+																		<ul>
+																			<li>
+																				<a href="https:www.in.group" class="us">English</a>
+																			</li>
+																			<li>
+																				<a href="https:www.in.group/es" class="es">Español</a>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
 														</ul>
 													</nav>
 													<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false" style="">
@@ -813,7 +1099,7 @@
 														<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i>
 														<span class="elementor-screen-only">Menu</span>
 													</div>
-													<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" role="navigation" aria-hidden="true" style="top: 0px; width: 1728px; left: 0px">
+													<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" role="navigation" aria-hidden="true" style="top: 35px; width: 1728px; left: 0px">
 														<ul id="menu-2-4efa5ec" class="elementor-nav-menu" data-smartmenus-id="16583576175679468">
 															<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7">
 																<a href="#top" class="elementor-item elementor-item-anchor" tabindex="-1">Home</a>
@@ -839,6 +1125,21 @@
 															<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10">
 																<a href="#contact" class="elementor-item elementor-item-anchor" tabindex="-1">Contact</a>
 															</li>
+															<li class="menu-item menu-item-type-custom menu-item-object-custom">
+																<div class="elementor-item elementor-item-anchor">
+																	<div class="lang-menu">
+																		<div class="selected-lang">English</div>
+																		<ul>
+																			<li>
+																				<a href="https:www.in.group" class="us">English</a>
+																			</li>
+																			<li>
+																				<a href="https:www.in.group/es" class="es">Español</a>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
 														</ul>
 													</nav>
 												</div>
@@ -859,10 +1160,10 @@
 					data-id="424868b"
 					data-element_type="section"
 					id="top"
-					data-settings='{"background_background":"video","background_video_link":"https:\/\/cr3ativegrowth.com\/ingroup\/wp-content\/uploads\/2022\/06\/Incruiser-Hero-banner-3-1.mp4","background_play_on_mobile":"yes","shape_divider_bottom":"waves","shape_divider_bottom_negative":"yes"}'
+					data-settings='{"background_background":"video","background_video_link":".\/files\/Incruiser-Hero-banner-3-1.mp4","background_play_on_mobile":"yes","shape_divider_bottom":"waves","shape_divider_bottom_negative":"yes"}'
 				>
 					<div class="elementor-background-video-container">
-						<video class="elementor-background-video-hosted elementor-html5-video" autoplay="" muted="" playsinline="" loop="" src="/wp-content/uploads/2022/06/Incruiser-Hero-banner-3-1.mp4" style="width: 1728px; height: 972px"></video>
+						<video class="elementor-background-video-hosted elementor-html5-video" autoplay="" muted="" playsinline="" loop="" src="./files/Incruiser-Hero-banner-3-1.mp4" style="width: 1728px; height: 972px"></video>
 					</div>
 					<div class="elementor-background-overlay"></div>
 					<div class="elementor-shape elementor-shape-bottom" data-negative="true">
@@ -1170,7 +1471,6 @@
 														</style>
 														<h3 class="elementor-heading-title elementor-size-default">
 															<span class="typed-me" data-string0="From Puerto Rico" data-string1="with LOVE" data-type-speed="40" data-start-delay="0" data-backspeed="40" data-back-delay="2000" data-loop="1">with LOVE</span>
-															<span class="typed-cursor">|</span>
 														</h3>
 													</div>
 												</div>
@@ -1182,8 +1482,8 @@
 														</h2>
 													</div>
 												</div>
-												<div class="elementor-element elementor-element-e7c9576 elementor-widget__width-initial elementor-widget elementor-widget-text-editor" data-id="e7c9576" data-element_type="widget" data-widget_type="text-editor.default">
-													<div class="elementor-widget-container">
+												<div class="elementor-element elementor-element-e7c9576 elementor-widget__width-initial elementor-widget elementor-widget-text-editor" style="margin-bottom: 15px" data-id="e7c9576" data-element_type="widget" data-widget_type="text-editor.default">
+													<div class="elementor-widget-container tablet-column" style="display: flex; align-items: center">
 														<style>
 															/*! elementor - v3.5.6 - 28-02-2022 */
 															.elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap {
@@ -1212,7 +1512,10 @@
 																display: inline-block;
 															}
 														</style>
-														<p>Known worldwide for delivering unmatched value to its customers, inGroup is growing strong and poised for more expansion.&nbsp;</p>
+														<p style="margin-bottom: 0; width: 70%">Known worldwide for delivering unmatched value to its customers, inGroup is growing strong and poised for more expansion.&nbsp;</p>
+														<a href="#" id="modal-open" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-grow custom-button" role="button">
+															<span aria-hidden="true" class="custom-button-span orange">Watch Video</span>
+														</a>
 													</div>
 												</div>
 												<div
@@ -1642,7 +1945,9 @@
 											<div class="elementor-widget-wrap elementor-element-populated">
 												<div class="elementor-element elementor-element-536be91 elementor-widget elementor-widget-image" data-id="536be91" data-element_type="widget" data-widget_type="image.default">
 													<div class="elementor-widget-container">
-														<img width="400" height="126" src="./files/in-element-004.png" class="attachment-large size-large" alt="" loading="lazy" sizes="(max-width: 400px) 100vw, 400px" />
+														<a href="https://www.incruises.com">
+															<img width="400" height="126" src="./files/brands/inCruises_AllWhite.png" class="attachment-large size-large" alt="" loading="lazy" sizes="(max-width: 400px) 100vw, 400px" />
+														</a>
 													</div>
 												</div>
 											</div>
@@ -1651,7 +1956,9 @@
 											<div class="elementor-widget-wrap elementor-element-populated">
 												<div class="elementor-element elementor-element-dfdb8d1 elementor-widget elementor-widget-image" data-id="dfdb8d1" data-element_type="widget" data-widget_type="image.default">
 													<div class="elementor-widget-container">
-														<img width="400" height="126" src="./files/in-element-004.png" class="attachment-large size-large" alt="" loading="lazy" sizes="(max-width: 400px) 100vw, 400px" />
+														<a href="https://www.incruises.com/hotels">
+															<img width="400" height="126" src="./files/brands/inStays_AllWhite.png" class="attachment-large size-large" alt="" loading="lazy" sizes="(max-width: 400px) 100vw, 400px" />
+														</a>
 													</div>
 												</div>
 											</div>
@@ -1790,14 +2097,6 @@
 																	<span class="elementor-icon-list-text"></span>
 																</a>
 															</li>
-															<li class="elementor-icon-list-item elementor-inline-item">
-																<a href="https://stopitbook.com/" target="_blank">
-																	<span class="elementor-icon-list-icon">
-																		<i aria-hidden="true" class="fas fa-book"></i>
-																	</span>
-																	<span class="elementor-icon-list-text"></span>
-																</a>
-															</li>
 														</ul>
 													</div>
 												</div>
@@ -1808,7 +2107,11 @@
 															<li data-v-705fa3a0="" data-msgid="Began career working with Ross Perot&#39;s Electronic Data Systems (EDS)" data-current-language="en">Began career working with Ross Perot’s Electronic Data Systems (EDS)</li>
 															<li data-v-705fa3a0="" data-msgid="Tony Robbins&#39; VP of Worldwide Sales and Marketing (1987-1994)" data-current-language="en">Tony Robbins’ VP of Worldwide Sales and Marketing (1987-1994)</li>
 															<li data-v-705fa3a0="" data-msgid="Dun and Bradstreet Host of web TV show Credibility LIVE" data-current-language="en">Dun and Bradstreet Host of web TV show Credibility LIVE</li>
-															<li data-v-705fa3a0="" data-msgid="Best selling author of Speaking Mastery, Stop It! and Profiles in Persistence" data-current-language="en">Best selling author of Speaking Mastery, Stop It! and Profiles in Persistence</li>
+															<li data-v-705fa3a0="" data-msgid="Best selling author of Speaking Mastery, Stop It! and Profiles in Persistence" data-current-language="en">
+																Best selling author of Speaking Mastery,
+																<a style="-webkit-font-smoothing: antialiased" href="http://www.startnowbook.com/" target="_blank" rel="noopener" data-v-705fa3a0="" data-msgid="START NOW! with Dr. Denis Cauvier" data-current-language="en">Stop It!</a>
+																and Profiles in Persistence
+															</li>
 															<li data-v-705fa3a0="" data-msgid="Mr. Hutchison lives in San Juan, Puerto Rico" data-current-language="en">Mr. Hutchison lives in Dorado, Puerto Rico</li>
 														</ul>
 													</div>
@@ -1873,11 +2176,9 @@
 															<li data-v-705fa3a0="" data-msgid="Co-founder of CitiSolutions Financial Limited in Spain, Ireland and UK" data-current-language="en">Co-founder of CitiSolutions Financial Limited in Spain, Ireland and UK</li>
 															<li data-v-705fa3a0="" data-msgid="Part of leadership team that helped spinoff Primerica in 2010 on the NYSE: PRI" data-current-language="en">Part of leadership team that helped spinoff Primerica in 2010 on the NYSE: PRI</li>
 															<li data-v-705fa3a0="">
-																<span style="-webkit-font-smoothing: antialiased" data-v-705fa3a0="" data-msgid="Co-founder and CEO of NEURS LLC, where he co-authored" data-current-language="en">Co-founder and CEO of NEURS LLC, where he co-authored</span>
-																&nbsp;
-																<a style="-webkit-font-smoothing: antialiased" href="http://www.startnowbook.com/" target="_blank" rel="noopener" data-v-705fa3a0="" data-msgid="START NOW! with Dr. Denis Cauvier" data-current-language="en">
-																	START NOW! with Dr. Denis Cauvier
-																</a>
+																<span style="-webkit-font-smoothing: antialiased" data-v-705fa3a0="" data-msgid="Co-founder and CEO of NEURS LLC, where he co-authored" data-current-language="en">
+																	Co-founder and CEO of NEURS LLC, where he co-authored START NOW! with Dr. Denis Cauvier
+																</span>
 															</li>
 															<li data-v-705fa3a0="" data-msgid="Mr. Codina lives in San Juan, Puerto Rico" data-current-language="en">Mr. Codina lives in San Juan, Puerto Rico</li>
 														</ul>
@@ -1954,7 +2255,7 @@
 													class="elementor-element elementor-element-553c80d elementor-widget elementor-widget-image-carousel"
 													data-id="553c80d"
 													data-element_type="widget"
-													data-settings='{"navigation":"none","autoplay":"yes","pause_on_hover":"yes","pause_on_interaction":"yes","autoplay_speed":5000,"infinite":"yes","speed":500,"image_spacing_custom":{"unit":"px","size":20,"sizes":[]}}'
+													data-settings='{"navigation":"none","autoplay":"yes","pause_on_hover":"no","pause_on_interaction":"yes","autoplay_speed":2500,"infinite":"no","speed":1000,"image_spacing_custom":{"unit":"px","size":20,"sizes":[]}}'
 													data-widget_type="image-carousel.default"
 												>
 													<div class="elementor-widget-container">
@@ -1975,34 +2276,19 @@
 														</style>
 														<div class="elementor-image-carousel-wrapper swiper-container swiper-container-initialized swiper-container-horizontal" dir="ltr">
 															<div class="elementor-image-carousel swiper-wrapper" style="transform: translate3d(-616px, 0px, 0px); transition-duration: 0ms">
-																<div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="0" style="width: 185.333px; margin-right: 20px">
+																<div class="swiper-slide" data-swiper-slide-index="0" style="width: 185.333px; margin-right: 20px">
 																	<figure class="swiper-slide-inner">
-																		<img class="swiper-slide-image" src="./files/incruises_logo_web.png" alt="incruises_logo_web" />
+																		<img class="swiper-slide-image" src="./files/future/inPay_Original.svg" alt="inpay_logo" />
 																	</figure>
 																</div>
-																<div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="1" style="width: 185.333px; margin-right: 20px">
+																<div class="swiper-slide" data-swiper-slide-index="1" style="width: 185.333px; margin-right: 20px">
 																	<figure class="swiper-slide-inner">
-																		<img class="swiper-slide-image" src="./files/in-element-003.png" alt="in-element-003" />
+																		<img class="swiper-slide-image" src="./files/future/inClub_Original.png" alt="inclub_logo" />
 																	</figure>
 																</div>
-																<div class="swiper-slide swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="0" style="width: 185.333px; margin-right: 20px">
+																<div class="swiper-slide" data-swiper-slide-index="2" style="width: 185.333px; margin-right: 20px">
 																	<figure class="swiper-slide-inner">
-																		<img class="swiper-slide-image" src="./files/incruises_logo_web.png" alt="incruises_logo_web" />
-																	</figure>
-																</div>
-																<div class="swiper-slide swiper-slide-active" data-swiper-slide-index="1" style="width: 185.333px; margin-right: 20px">
-																	<figure class="swiper-slide-inner">
-																		<img class="swiper-slide-image" src="./files/in-element-003.png" alt="in-element-003" />
-																	</figure>
-																</div>
-																<div class="swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev" data-swiper-slide-index="0" style="width: 185.333px; margin-right: 20px">
-																	<figure class="swiper-slide-inner">
-																		<img class="swiper-slide-image" src="./files/incruises_logo_web.png" alt="incruises_logo_web" />
-																	</figure>
-																</div>
-																<div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="1" style="width: 185.333px; margin-right: 20px">
-																	<figure class="swiper-slide-inner">
-																		<img class="swiper-slide-image" src="./files/in-element-003.png" alt="in-element-003" />
+																		<img class="swiper-slide-image" src="./files/future/inTours_Original.png" alt="intours_logo" />
 																	</figure>
 																</div>
 															</div>
@@ -2113,7 +2399,7 @@
 															}
 														</style>
 														<div class="e-hosted-video elementor-wrapper elementor-fit-aspect-ratio elementor-open-inline">
-															<video class="elementor-video" src="/wp-content/uploads/2022/06/Incruiser-Hero-banner-3-1.mp4" controls="" controlslist="nodownload"></video>
+															<iframe class="elementor-video" src="https://player.vimeo.com/video/713554458?autoplay=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 														</div>
 													</div>
 												</div>
@@ -2186,7 +2472,7 @@
 												</div>
 												<div class="elementor-element elementor-element-15e4d02 elementor-widget elementor-widget-text-editor" data-id="15e4d02" data-element_type="widget" data-widget_type="text-editor.default">
 													<div class="elementor-widget-container">
-														<p>INGROUP also as supported MAKE-A-WISH (Puerto Rico) and has recently partnered with MercyShips raising over $300,000 for this global charity.</p>
+														<p>INGROUP also supports MAKE-A-WISH (Puerto Rico) and has recently partnered with MercyShips raising over $300,000 for this global charity.</p>
 													</div>
 												</div>
 											</div>
@@ -2289,7 +2575,15 @@
 											<div class="elementor-widget-wrap elementor-element-populated">
 												<div class="elementor-element elementor-element-37ae3fb elementor-widget elementor-widget-html" data-id="37ae3fb" data-element_type="widget" data-widget_type="html.default">
 													<div class="elementor-widget-container">
-														<iframe src="./files/embed.html" width="100%" height="500" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+														<iframe
+															src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3785.8538369527787!2d-66.12604558582811!3d18.399502187479595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c0369cce9158b83%3A0xab00a2b4b3cd4779!2sinCruises!5e0!3m2!1ses!2sco!4v1655509480666!5m2!1ses!2sco"
+															width="100%"
+															height="500"
+															style="border-radius: 12px"
+															allowfullscreen=""
+															loading="lazy"
+															referrerpolicy="no-referrer-when-downgrade"
+														></iframe>
 													</div>
 												</div>
 											</div>
@@ -2549,30 +2843,44 @@
 																height: 1em;
 															}
 														</style>
-														<form class="elementor-form" method="post" name="New Form">
-															<input type="hidden" name="post_id" value="26" />
-															<input type="hidden" name="form_id" value="7eeda1f" />
-															<input type="hidden" name="referer_title" value="" />
-
-															<input type="hidden" name="queried_id" value="26" />
-
-															<div class="elementor-form-fields-wrapper elementor-labels-above">
+														<script>
+															function processContactSubmit() {
+																jQuery(function ($) {
+																	var request = new XMLHttpRequest();
+																	request.open('POST', './contact.php');
+																	request.onreadystatechange = function () {
+																		if (this.readyState === 4 && this.status === 200) {
+																			let response = JSON.parse(this.responseText);
+																			document.getElementById('contactForm').innerHTML += `<div class="elementor-message elementor-message-${response.type}" role="alert">` + response.msg + '</div>';
+																		}
+																	};
+																	var myForm = document.getElementById('contactForm');
+																	var formData = new FormData(myForm);
+																	request.send(formData);
+																});
+															}
+														</script>
+														<form id="contactForm" class="elementor-form" method="post" name="contact_form" onsubmit="return processContactSubmit()">
+															<div class="elementor-form-fields-wrapper elementor-labels-above" id="form-body">
 																<div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-100 elementor-field-required">
 																	<label for="form-field-email" class="elementor-field-label">Email</label>
-																	<input size="1" type="email" name="form_fields[email]" id="form-field-email" class="elementor-field elementor-size-md elementor-field-textual" placeholder="Your Email" required="required" aria-required="true" />
+																	<input size="1" type="email" name="visitor_email" id="form-field-email" class="elementor-field elementor-size-md elementor-field-textual" placeholder="Your Email" required="required" aria-required="true" />
 																</div>
 																<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-100 elementor-field-required">
 																	<label for="form-field-name" class="elementor-field-label">Full Name</label>
-																	<input size="1" type="text" name="form_fields[name]" id="form-field-name" class="elementor-field elementor-size-md elementor-field-textual" placeholder="Your Full Name" required="required" aria-required="true" />
+																	<input size="1" type="text" name="visitor_name" id="form-field-name" class="elementor-field elementor-size-md elementor-field-textual" placeholder="Your Full Name" required="required" aria-required="true" />
+																</div>
+																<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-100 elementor-field-required">
+																	<label for="form-field-subject" class="elementor-field-label">Subject</label>
+																	<input size="1" type="text" name="email_title" id="form-field-subject" class="elementor-field elementor-size-md elementor-field-textual" placeholder="Subject" required="required" aria-required="true" />
 																</div>
 																<div class="elementor-field-type-textarea elementor-field-group elementor-column elementor-field-group-message elementor-col-100">
 																	<label for="form-field-message" class="elementor-field-label">Message</label>
-																	<textarea class="elementor-field-textual elementor-field elementor-size-md" name="form_fields[message]" id="form-field-message" rows="4" placeholder="Please type your message here."></textarea>
+																	<textarea class="elementor-field-textual elementor-field elementor-size-md" name="visitor_message" id="form-field-message" rows="4" placeholder="Please type your message here."></textarea>
 																</div>
 																<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
 																	<button type="submit" class="elementor-button elementor-size-md elementor-animation-float">
 																		<span>
-																			<span class="elementor-button-icon"></span>
 																			<span class="elementor-button-text">Contact Us</span>
 																		</span>
 																	</button>
@@ -2921,6 +3229,21 @@
 															<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10">
 																<a href="#contact" class="elementor-item elementor-item-anchor">Contact</a>
 															</li>
+															<li class="menu-item menu-item-type-custom menu-item-object-custom">
+																<div class="elementor-item elementor-item-anchor">
+																	<div class="lang-menu lang-menu-scroll">
+																		<div class="selected-lang">Español</div>
+																		<ul>
+																			<li>
+																				<a href="https:www.in.group" class="us">English</a>
+																			</li>
+																			<li>
+																				<a href="https:www.in.group/es" class="es">Español</a>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
 														</ul>
 													</nav>
 													<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
@@ -2953,6 +3276,21 @@
 															</li>
 															<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10">
 																<a href="#contact" class="elementor-item elementor-item-anchor" tabindex="-1">Contact</a>
+															</li>
+															<li class="menu-item menu-item-type-custom menu-item-object-custom">
+																<div class="elementor-item elementor-item-anchor">
+																	<div class="lang-menu">
+																		<div class="selected-lang">English</div>
+																		<ul>
+																			<li>
+																				<a href="https:www.in.group" class="us">English</a>
+																			</li>
+																			<li>
+																				<a href="https:www.in.group/es" class="es">Español</a>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
 															</li>
 														</ul>
 													</nav>
@@ -2992,6 +3330,21 @@
 															<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10">
 																<a href="#contact" class="elementor-item elementor-item-anchor">Contact</a>
 															</li>
+															<li class="menu-item menu-item-type-custom menu-item-object-custom">
+																<div class="elementor-item elementor-item-anchor">
+																	<div class="lang-menu lang-menu-scroll">
+																		<div class="selected-lang">English</div>
+																		<ul>
+																			<li>
+																				<a href="https:www.in.group" class="us">English</a>
+																			</li>
+																			<li>
+																				<a href="https:www.in.group/es" class="es">Español</a>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
 														</ul>
 													</nav>
 													<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
@@ -3025,6 +3378,21 @@
 															<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10">
 																<a href="#contact" class="elementor-item elementor-item-anchor" tabindex="-1">Contact</a>
 															</li>
+															<li class="menu-item menu-item-type-custom menu-item-object-custom">
+																<div class="elementor-item elementor-item-anchor">
+																	<div class="lang-menu">
+																		<div class="selected-lang">English</div>
+																		<ul>
+																			<li>
+																				<a href="https:www.in.group" class="us">English</a>
+																			</li>
+																			<li>
+																				<a href="https:www.in.group/es" class="es">Español</a>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</li>
 														</ul>
 													</nav>
 												</div>
@@ -3033,28 +3401,6 @@
 									</div>
 									<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-1447c45" data-id="1447c45" data-element_type="column">
 										<div class="elementor-widget-wrap elementor-element-populated">
-											<div
-												class="elementor-element elementor-element-8803241 elementor-view-stacked elementor-position-left elementor-widget__width-initial elementor-shape-circle elementor-vertical-align-top elementor-widget elementor-widget-icon-box"
-												data-id="8803241"
-												data-element_type="widget"
-												data-widget_type="icon-box.default"
-											>
-												<div class="elementor-widget-container">
-													<div class="elementor-icon-box-wrapper">
-														<div class="elementor-icon-box-icon">
-															<a class="elementor-icon elementor-animation-float" href="#top">
-																<i aria-hidden="true" class="fas fa-chevron-up"></i>
-															</a>
-														</div>
-														<div class="elementor-icon-box-content">
-															<h3 class="elementor-icon-box-title">
-																<a href="#top"></a>
-															</h3>
-															<p class="elementor-icon-box-description">Back to top</p>
-														</div>
-													</div>
-												</div>
-											</div>
 											<div class="elementor-element elementor-element-cae481a elementor-widget elementor-widget-text-editor" data-id="cae481a" data-element_type="widget" data-widget_type="text-editor.default">
 												<div class="elementor-widget-container">® INGROUP INTERNATIONAL LLC 2018-Present</div>
 											</div>
@@ -3068,8 +3414,29 @@
 			</section>
 		</div>
 
+		<div id="company-video-modal" class="ic-modal fixed">
+			<div class="card">
+				<div class="card-body">
+					<iframe class="modal-video" src="https://player.vimeo.com/video/447245262?autoplay=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				</div>
+				<div style="text-align: center">
+					<a href="#" id="modal-close" class="elementor-button-link elementor-button elementor-size-sm custom-button" role="button">
+						<span aria-hidden="true" class="custom-button-span gray no-shadow custom-padding" style="font-weight: 600">Close</span>
+					</a>
+				</div>
+			</div>
+		</div>
+
 		<span aria-hidden="true" id="to_top_scrollup" class="dashicons dashicons-arrow-up-alt2" style="opacity: 0"><span class="screen-reader-text">Scroll Up</span></span>
 		<link rel="stylesheet" id="e-animations-css" href="./files/animations.min.css" type="text/css" media="all" />
+		<!-- Modal toggle function -->
+		<script type="text/javascript">
+			jQuery(function ($) {
+				$('#modal-open, #modal-close').click(function () {
+					$('#company-video-modal').toggleClass('active');
+				});
+			});
+		</script>
 		<script type="text/javascript" src="./files/typed.js" id="typed-script-js"></script>
 		<script type="text/javascript" src="./files/typed.fe.js" id="typed-frontend-js"></script>
 		<script type="text/javascript" src="./files/hello-frontend.min.js" id="hello-theme-frontend-js"></script>
@@ -3086,7 +3453,6 @@
 		</script>
 		<script type="text/javascript" id="elementor-pro-frontend-js-before">
 			var ElementorProFrontendConfig = {
-				ajaxurl: 'https:\/\/cr3ativegrowth.com\/ingroup\/wp-admin\/admin-ajax.php',
 				nonce: '1ac2adc230',
 				urls: {
 					assets: 'https:\/\/cr3ativegrowth.com\/ingroup\/wp-content\/plugins\/elementor-pro\/assets\/',
@@ -3112,9 +3478,9 @@
 					email: { title: 'Email' },
 					print: { title: 'Print' }
 				},
-				facebook_sdk: { lang: 'es_CO', app_id: '' },
+				facebook_sdk: { lang: 'es', app_id: '' },
 				lottie: {
-					defaultAnimationUrl: 'https:\/\/cr3ativegrowth.com\/ingroup\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json'
+					defaultAnimationUrl: '.\/files\/default.json'
 				}
 			};
 		</script>
