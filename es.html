@@ -589,22 +589,31 @@
 			.us:before {
 				background-image: url(./files/flags/us.svg);
 			}
+			.future-logos {
+				margin-bottom: 10px;
+			}
 			@media (max-width: 576px) {
 				.future-wrapper {
-					width: 100%;
-					flex-direction: column;
-				}
-				.future-logos {
-					margin-right: initial !important;
-					height: 60px;
-					display: flex;
+					flex-wrap: wrap;
 					justify-content: center;
 				}
-				.future-logos img {
-					height: 100%;
+				.future-logos {
+					width: 50%;
+					margin-bottom: 10px;
 				}
-				.elementor-shape.elementor-shape-bottom {
-					display: none;
+				.elementor-element-cae481a .elementor-widget-container {
+					font-size: 14px;
+				}
+				.elementor-61 .elementor-element.elementor-element-ee14a11 {
+					text-align: center;
+				}
+			}
+			@media (min-width: 576px) {
+				.future-logos img {
+					max-height: 60px;
+				}
+				.future-logos {
+					margin-right: 10px;
 				}
 			}
 		</style>
@@ -731,7 +740,7 @@
 					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-47e6ad8" data-id="47e6ad8" data-element_type="column">
 						<div class="elementor-widget-wrap elementor-element-populated">
 							<section class="elementor-section elementor-inner-section elementor-element elementor-element-bfd479f elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="bfd479f" data-element_type="section">
-								<div class="elementor-container elementor-column-gap-default">
+								<div class="elementor-container elementor-column-gap-default" style="justify-content: space-between">
 									<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-f8be334" data-id="f8be334" data-element_type="column">
 										<div class="elementor-widget-wrap elementor-element-populated">
 											<div class="elementor-element elementor-element-fcc5ff2 elementor-widget elementor-widget-image" data-id="fcc5ff2" data-element_type="widget" data-widget_type="image.default">
@@ -883,7 +892,7 @@
 					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1e43ba0" data-id="1e43ba0" data-element_type="column">
 						<div class="elementor-widget-wrap elementor-element-populated">
 							<section class="elementor-section elementor-inner-section elementor-element elementor-element-b5171a6 elementor-reverse-mobile elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="b5171a6" data-element_type="section">
-								<div class="elementor-container elementor-column-gap-default" style="flex-wrap: nowrap">
+								<div class="elementor-container elementor-column-gap-default" style="flex-wrap: nowrap; justify-content: space-between">
 									<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-e63489b mobile-remove" data-id="9f60906" data-element_type="column">
 										<div class="elementor-widget-wrap elementor-element-populated"></div>
 									</div>
@@ -1498,7 +1507,7 @@
 														</h2>
 													</div>
 												</div>
-												<div class="elementor-element elementor-element-e7c9576 elementor-widget__width-initial elementor-widget elementor-widget-text-editor" style="margin-bottom: 15px" data-id="e7c9576" data-element_type="widget" data-widget_type="text-editor.default">
+												<div class="elementor-element elementor-element-e7c9576 elementor-widget__width-initial elementor-widget elementor-widget-text-editor" style="margin-bottom: 20px" data-id="e7c9576" data-element_type="widget" data-widget_type="text-editor.default">
 													<div class="elementor-widget-container tablet-column">
 														<style>
 															/*! elementor - v3.5.6 - 28-02-2022 */
@@ -2284,13 +2293,13 @@
 														}
 													</style>
 													<div class="future-wrapper" style="display: flex" dir="ltr">
-														<div class="future-logos" style="margin-right: 20px; margin-bottom: 20px">
+														<div class="future-logos">
 															<img src="./files/future/inPay_Original.png" alt="inpay_logo" />
 														</div>
-														<div class="future-logos" style="margin-right: 20px; margin-bottom: 20px">
+														<div class="future-logos">
 															<img src="./files/future/inClub_Original.png" alt="inclub_logo" />
 														</div>
-														<div class="future-logos" style="margin-right: 20px; margin-bottom: 20px">
+														<div class="future-logos">
 															<img src="./files/future/inTours_Original.png" alt="intours_logo" />
 														</div>
 													</div>
@@ -2839,7 +2848,7 @@
 															}
 														</style>
 														<script>
-															function processContáctanosSubmit() {
+															function processContactSubmit() {
 																jQuery(function ($) {
 																	var request = new XMLHttpRequest();
 																	request.open('POST', './contact.php');
@@ -2855,7 +2864,7 @@
 																});
 															}
 														</script>
-														<form id="contactForm" class="elementor-form" method="post" name="contact_form" onsubmit="return processContáctanosSubmit()">
+														<form id="contactForm" class="elementor-form" method="post" name="contact_form" onsubmit="return processContactSubmit()">
 															<div class="elementor-form-fields-wrapper elementor-labels-above" id="form-body">
 																<div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-100 elementor-field-required">
 																	<label for="form-field-email" class="elementor-field-label">Correo</label>
@@ -2912,7 +2921,7 @@
 					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-918fd85" data-id="918fd85" data-element_type="column">
 						<div class="elementor-widget-wrap elementor-element-populated">
 							<section class="elementor-section elementor-inner-section elementor-element elementor-element-e1e1c6f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e1e1c6f" data-element_type="section">
-								<div class="elementor-container elementor-column-gap-default" style="flex-direction: column;">
+								<div class="elementor-container elementor-column-gap-default" style="flex-direction: column">
 									<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-da217a6" data-id="da217a6" data-element_type="column">
 										<div class="elementor-widget-wrap elementor-element-populated">
 											<div class="elementor-element elementor-element-ee14a11 elementor-widget elementor-widget-image" data-id="ee14a11" data-element_type="widget" data-widget_type="image.default">
@@ -3296,7 +3305,7 @@
 									<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-1447c46" data-id="1447c45" data-element_type="column">
 										<div class="elementor-widget-wrap elementor-element-populated">
 											<div class="elementor-element elementor-element-cae481a elementor-widget elementor-widget-text-editor" data-id="cae481a" data-element_type="widget" data-widget_type="text-editor.default">
-												<div class="elementor-widget-container" style="text-align: center;">® INGROUP INTERNATIONAL LLC 2018-Present</div>
+												<div class="elementor-widget-container" style="text-align: center">® INGROUP INTERNATIONAL LLC 2018-Present</div>
 											</div>
 										</div>
 									</div>
