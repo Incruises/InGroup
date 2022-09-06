@@ -2853,24 +2853,7 @@
 																height: 1em;
 															}
 														</style>
-														<script>
-															function processContactSubmit() {
-																jQuery(function ($) {
-																	var request = new XMLHttpRequest();
-																	request.open('POST', './contact.php');
-																	request.onreadystatechange = function () {
-																		if (this.readyState === 4 && this.status === 200) {
-																			let response = JSON.parse(this.responseText);
-																			document.getElementById('contactForm').innerHTML += `<div class="elementor-message elementor-message-${response.type}" role="alert">` + response.msg + '</div>';
-																		}
-																	};
-																	var myForm = document.getElementById('contactForm');
-																	var formData = new FormData(myForm);
-																	request.send(formData);
-																});
-															}
-														</script>
-														<form id="contactForm" class="elementor-form" method="post" name="contact_form" action="https://www.incruises.com/api/ingroup_contact">
+														<form id="" class="" method="post" name="" action="https://www.incruises.com/api/ingroup_contact">
 															<div class="elementor-form-fields-wrapper elementor-labels-above" id="form-body">
 																<div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-100 elementor-field-required">
 																	<label for="form-field-email" class="elementor-field-label">Email</label>
