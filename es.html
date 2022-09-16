@@ -2853,7 +2853,47 @@
 																height: 1em;
 															}
 														</style>
-														<form id="" class="" method="post" name="" action="https://www.incruises.com/api/ingroup_contact">
+														<script>
+															initRecaptcha = function () {
+																console.log('Initializing recaptcha..');
+
+																let _this = this;
+																setTimeout(function () {
+																	if (typeof grecaptcha === 'undefined' && grecaptcha.render) {
+																		_this.initRecaptcha();
+																	} else {
+																		console.log('Loaded recaptcha.');
+																		grecaptcha.render('recaptcha', {
+																			sitekey: '6Ldpq5sUAAAAAHwqkpagdo4Cq0TGsBi-TZo3kHfB',
+																			size: 'invisible',
+																			badge: 'bottomleft',
+																			callback: _this.submit
+																		});
+																	}
+																}, 1000);
+															};
+
+															submit = function (token) {
+																let form = document.getElementById('contact-form');
+
+																var input = document.createElement('input');
+																input.setAttribute('type', 'hidden');
+																input.setAttribute('name', 'g-recaptcha-response');
+																input.setAttribute('value', token);
+																form.appendChild(input);
+
+																form.action = 'https://www.incruises.com/api/ingroup_contact';
+																form.removeAttribute('onsubmit');
+																form.submit();
+															};
+
+															validate = function () {
+																grecaptcha.execute();
+															};
+
+															initRecaptcha();
+														</script>
+														<form id="contact-form" class="" method="post" name="" onsubmit="return false">
 															<div class="elementor-form-fields-wrapper elementor-labels-above" id="form-body">
 																<div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-100 elementor-field-required">
 																	<label for="form-field-email" class="elementor-field-label">Correo</label>
@@ -2871,8 +2911,11 @@
 																	<label for="form-field-message" class="elementor-field-label">Mensaje</label>
 																	<textarea class="elementor-field-textual elementor-field elementor-size-md" name="message" id="form-field-message" rows="4" placeholder="Por favor escribe tu mensaje aquí."></textarea>
 																</div>
+
+																<div id="recaptcha" class="g-recaptcha" style="z-index: 1000"></div>
+
 																<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
-																	<button type="submit" class="elementor-button elementor-size-md elementor-animation-float">
+																	<button type="submit" onclick="validate()" class="elementor-button elementor-size-md elementor-animation-float">
 																		<span>
 																			<span class="elementor-button-text">Contáctanos</span>
 																		</span>
@@ -3501,5 +3544,7 @@
 		<script type="text/javascript" src="./files/jquery.sticky.min.js" id="e-sticky-js"></script>
 
 		<script src="./files/swiper.min.js"></script>
+
+		<script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
 	</body>
 </html>
