@@ -2888,6 +2888,9 @@
 															.elementor-form .elementor-button .e-font-icon-svg {
 																height: 1em;
 															}
+															.elementor-button[type='submit'][disabled] {
+																opacity: 0.5;
+															}
 														</style>
 														<script>
 															initRecaptcha = function () {
@@ -2939,13 +2942,17 @@
 																</div>
 																<div class="elementor-field-type-textarea elementor-field-group elementor-column elementor-field-group-message elementor-col-100">
 																	<label for="form-field-message" class="elementor-field-label">Mensaje</label>
-																	<textarea class="elementor-field-textual elementor-field elementor-size-md" name="message" id="form-field-message" rows="4" placeholder="Por favor escribe tu mensaje aquí."></textarea>
+																	<textarea class="elementor-field-textual elementor-field elementor-size-md" name="message" id="form-field-message" rows="4" placeholder="Por favor escribe tu mensaje aquí." required="required" aria-required="true"></textarea>
+																</div>
+																<div class="elementor-field-type-textarea elementor-field-group elementor-column elementor-field-group-message elementor-col-100" style="flex-wrap: initial">
+																	<input type="checkbox" id="form-field-term" name="terms" onchange="document.getElementById('submitButton').disabled = !this.checked;" required="required" style="flex-basis: 15%" aria-required="true" />
+																	<label for="form-field-term" class="elementor-field-label" style="padding: 0">Reconozco que este mensaje NO está relacionado con mi programa de membresía o asociación inCruises.</label>
 																</div>
 
 																<div id="recaptcha" class="g-recaptcha" style="z-index: 1000"></div>
 
 																<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
-																	<button type="submit" onclick="validate()" class="elementor-button elementor-size-md elementor-animation-float">
+																	<button type="submit" id="submitButton" onclick="validate()" class="elementor-button elementor-size-md elementor-animation-float" disabled>
 																		<span>
 																			<span class="elementor-button-text">Contáctanos</span>
 																		</span>
