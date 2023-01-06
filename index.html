@@ -2897,19 +2897,24 @@
 																console.log('Initializing recaptcha..');
 
 																let _this = this;
-																setTimeout(function () {
-																	if (typeof grecaptcha === 'undefined' && grecaptcha.render) {
-																		_this.initRecaptcha();
-																	} else {
-																		console.log('Loaded recaptcha.');
-																		grecaptcha.render('recaptcha', {
-																			sitekey: '6Ldpq5sUAAAAAHwqkpagdo4Cq0TGsBi-TZo3kHfB',
-																			size: 'invisible',
-																			badge: 'bottomleft',
-																			callback: _this.submit
-																		});
-																	}
-																}, 1000);
+
+																var loadRecaptcha = function () {
+																	console.log('Loaded recaptcha.');
+																	grecaptcha.render('recaptcha', {
+																		sitekey: '6Ldpq5sUAAAAAHwqkpagdo4Cq0TGsBi-TZo3kHfB',
+																		size: 'invisible',
+																		badge: 'bottomleft',
+																		callback: _this.submit
+																	});
+																};
+
+																if (typeof grecaptcha === 'undefined') {
+																	setTimeout(function () {
+																		loadRecaptcha();
+																	}, 1500);
+																} else {
+																	loadRecaptcha();
+																}
 															};
 
 															submit = function (token) {
